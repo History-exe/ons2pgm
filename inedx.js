@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var onsStr = fs.readFileSync('./ons.txt').toString()
+var onsStr = fs.readFileSync('./ons.txt').toString();
 
 var onsArr = onsStr.split('\n')
 var pgmArr = []
