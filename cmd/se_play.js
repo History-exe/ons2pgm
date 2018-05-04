@@ -7,5 +7,6 @@ module.exports = function (row, pgmArr) {
         if (name == 'none')
             return
         pgmArr.push('sound("' + name + '.mp3")')
+        return true
     }
 }
