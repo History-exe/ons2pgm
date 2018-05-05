@@ -25,5 +25,5 @@ for (var i = 0; i < onsArr.length; i++) {
             break
 }
 
-//暂时输出结果看看
-console.log(pgmArr)
+//输出结果到文件
+fs.writeFileSync('./pgm_out.txt', pgmArr.join('\n'))
