@@ -17,9 +17,11 @@ var pgmArr = []
 for (var i = 0; i < onsArr.length; i++) {
     var row = onsArr[i]
 
-    //依次取所有函数执行 如果某函数返回true 则break出循环
+    //依次取所有函数执行
+    //如果某函数返回真 表示由这个函数正确处理了语句 则break出循环 不执行其他函数了
+    //如果函数返回假(没写return的函数运行结束就默认返回null 是假) 那函数里面就不会做什么 会继续循环到下一个函数
     for (var fun of funArr)
-        if (fun(row, pgmArr)) //等价于if (fun(row, pgmArr)==true)
+        if (fun(row, pgmArr))
             break
 }
 
