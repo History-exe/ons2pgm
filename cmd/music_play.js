@@ -15,7 +15,7 @@ module.exports = function (row, pgmArr) {
             return
 
         //转换成pgm的形式
-        pgmArr.push('bgm("' + name + '.mp3")')
+        pgmArr.push(`bgm("${name}.mp3")`)
 
         //返回真表示这个函数处理成功
         return true
