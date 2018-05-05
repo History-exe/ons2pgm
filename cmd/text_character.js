@@ -1,11 +1,11 @@
 module.exports = function (row, pgmArr) {
     //如果这行不是需要的匹配 就返回
-    if (row.search(/[.*].*/) == -1)
+    if (row.search(/\[\/.*\/\].*/) == -1)
         return
 
     //提取说话人的名字和说的话
-    var name = row.match(/(?<=[).*(?=].*)/)
-    var data = row.match(/(?<=[.*]).*/)
+    var name = row.match(/(?<=\[\/).*(?=\/\].*)/)
+    var data = row.match(/(?<=\[\/.*\/\]).*/)
 
     //如果没拿到数据 就报意外的语句 并返回假
     if (name == null || name.length == 0 || data == null || data.length == 0)
