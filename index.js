@@ -1,10 +1,12 @@
 var fs = require('fs')
 
 var music_play = require('./cmd/music_play')
+var music_stop = require('./cmd/music_stop')
 var se_play = require('./cmd/se_play')
 
 var funArr = []
 funArr.push(music_play)
+funArr.push(music_stop)
 funArr.push(se_play)
 
 var onsStr = fs.readFileSync('./ons.txt').toString();
