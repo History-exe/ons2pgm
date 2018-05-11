@@ -1,5 +1,5 @@
 module.exports = function (row, pgmArr) {
-    if (row.substring(0, 7) == 'chara01') {
+    if (row.substring(0, 6) == 'chara0') {
         var name = row.match(/(?<="file4",").*(?=")/)
         if (name == null || name.length == 0)
             return console.log('意外的 fg 行:' + row)
